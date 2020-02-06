@@ -27,3 +27,4 @@ backend/env/
 backend/farmers_portal/farmers_portal/__pycache__/
 backend/farmers_portal/farmer/__pycache__/
 backend/farmers_portal/customer/__pycache__/
+.vscode/
