@@ -31,3 +31,33 @@ def add_farmer(request):
                 return Response(ser_farmer.data)
             return Response(ser_farmer.errors)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(["POST"])
+def farmer_login(request):
+
+    if request.method == 'POST':
+        username = request.data["username"]
+        password = request.data["password"]
+
+        try:
+            user = MyUser.objects.get(username=username, is_farmer=True)
+            if user.password_check(password):
+                return Response({"valid":"true"})
+            return Response({"valid":"false"})
+        except:
+            return Response({"error":"User Not Found"})
+
+@api_view(["POST"])
+def customer_login(request):
+
+    if request.method == 'POST':
+        username = request.data["username"]
+        password = request.data["password"]
+
+        try:
+            user = MyUser.objects.get(username=username, is_customer=True)
+            if user.password_check(password):
+                return Response({"valid":"true"})
+            return Response({"valid":"false"})
+        except:
+            return Response({"error":"User Not Found"})
