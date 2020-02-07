@@ -23,16 +23,16 @@ def CropListView(request):
             return Response(serializer.data)
         return Response(serializer.errors)
 
-api_view(["GET","DELETE","PUT"])
+@api_view(["GET","DELETE","PUT"])
 def CropDetail(request,pk):
-
     try:
         crop = Crop.objects.get(pk=pk)
     except Crop.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = CropSerializer(crop)
+        data = {'name': crop.name, 'quantity': crop.quantity, 'price': crop.price, 'image': crop.image, 'farmer': crop.farmer, 'state': crop.farmer.state, 'district': crop.farmer.district}
+        serializer = CropSerializerLoc(data)
         return Response(serializer.data)
 
     elif request.method == 'PUT':
