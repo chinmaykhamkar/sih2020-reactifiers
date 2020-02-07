@@ -1,18 +1,5 @@
-<!--
-=========================================================
- Light Bootstrap Dashboard - v2.0.1
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
-
- Coded by Creative Tim
-
-=========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -43,11 +30,48 @@
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="http://www.creative-tim.com" class="simple-text">
-                        Creative Tim
+                        Reactifiers
                     </a>
                 </div>
                 <ul class="nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="market.html">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Market</p>
+                        </a>
+                    </li>
                     <li>
+                        <a class="nav-link" href="addProduct.html">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>Add product</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./table.html">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>History</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="schemes.html">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>Schemes</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="blogs.html">
+                            <i class="nc-icon nc-atom"></i>
+                            <p>Blogs</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="history.html">
+                            <i class="nc-icon nc-atom"></i>
+                            <p>dummy</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link" href="dashboard.html">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Dashboard</p>
@@ -59,42 +83,7 @@
                             <p>User Profile</p>
                         </a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="./table.html">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>Table List</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./typography.html">
-                            <i class="nc-icon nc-paper-2"></i>
-                            <p>Typography</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./icons.html">
-                            <i class="nc-icon nc-atom"></i>
-                            <p>Icons</p>
-                        </a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./maps.html">
-                            <i class="nc-icon nc-pin-3"></i>
-                            <p>Maps</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./notifications.html">
-                            <i class="nc-icon nc-bell-55"></i>
-                            <p>Notifications</p>
-                        </a>
-                    </li>
-                    <li class="nav-item active active-pro">
-                        <a class="nav-link active" href="upgrade.html">
-                            <i class="nc-icon nc-alien-33"></i>
-                            <p>Upgrade to PRO</p>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -102,7 +91,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Maps </a>
+                    <a class="navbar-brand" href="#pablo"> Dashboard </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -166,9 +155,34 @@
                 </div>
             </nav>
             <!-- End Navbar -->
-            <div class="map-container">
-                <div id="map"></div>
+
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <div class="card">
+                                <div class="card-horizontal">
+                                    <div class="img-square-wrapper">
+                                        <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
+
+
             <footer class="footer">
                 <div class="container-fluid">
                     <nav>
@@ -305,7 +319,9 @@
 <script type="text/javascript">
     $(document).ready(function() {
         // Javascript method's body can be found in assets/js/demos.js
-        demo.initGoogleMaps();
+        demo.initDashboardPageCharts();
+
+        demo.showNotification();
 
     });
 </script>

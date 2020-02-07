@@ -8,7 +8,7 @@ function login() {
         })
         .then(function(data) {
             console.log(data.data.valid);
-            window.sessionStorage.setItem('check', data.data.name);
+            window.sessionStorage.setItem('check', data.data.username);
             if (data.data.valid === 'true') {
 
                 window.location.href = 'dashboard.html';
