@@ -42,7 +42,7 @@ def farmer_login(request):
         try:
             user = MyUser.objects.get(username=username, is_farmer=True)
             if user.password_check(password):
-                return Response({"valid":"true"})
+                return Response({"username":username, "valid":"true"})
             return Response({"valid":"false"})
         except:
             return Response({"error":"User Not Found"})
