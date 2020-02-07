@@ -8,4 +8,5 @@ class Crop(models.Model):
     image = models.ImageField()
     farmer = models.ForeignKey(Farmer,on_delete=models.CASCADE)
     
-    
+    def __str__(self):
+        return self.name
