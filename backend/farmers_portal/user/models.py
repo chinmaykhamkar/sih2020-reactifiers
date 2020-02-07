@@ -23,10 +23,10 @@ class Farmer(models.Model):
     phone_number = models.IntegerField(unique=True)
 
     def __str__(self):
-        return self.user.username
+        return self.user.username + " " + str(self.user.id)
 
 class Customer(models.Model):
     user = models.OneToOneField(get_user_model(), on_delete= models.CASCADE, primary_key=True)
     phone_number = models.IntegerField(unique=True)
     def __str__(self):
-        return self.user.username
+        return self.user.username + " " + str(self.user.id)
