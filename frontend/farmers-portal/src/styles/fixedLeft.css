@@ -1,0 +1,21 @@
+.leftList {
+    color: #fff;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitColor {
+    color: 'white',
+}
+
+.submitColor:hover {
+    color: 'black',
+}
+
+.leftList:hover {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    color: black;
+}
