@@ -2,14 +2,17 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Crop
-from .serializers import CropSerializer
+from .serializers import CropSerializer, CropSerializerLoc
 
 @api_view(["GET","POST"])
 def CropListView(request):
 
     if request.method == "GET":
         crops = Crop.objects.all()
-        serializer = CropSerializer(crops,many=True)
+        data = []
+        for i in crops:
+            data.append({'name': i.name, 'quantity': i.quantity, 'price': i.price, 'image': i.image, 'farmer': i.farmer, 'state': i.farmer.state, 'district': i.farmer.district})
+        serializer = CropSerializerLoc(data,many=True)
         return Response(serializer.data)
     
     elif request.method == "POST":
